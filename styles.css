@@ -18,7 +18,7 @@ body
     color: yellow;
 }
 
-#add-to-cart-container
+#add-movies-container
 {
     display: flex;
     flex-direction: column;
@@ -47,7 +47,7 @@ body
     flex-direction: column;
 }
 
-#text-input
+#input-field
 {
     font-family: 'Press Start 2P';
     width: 100%;
@@ -62,13 +62,13 @@ body
     color: grey
 }
 
-#text-input:active
+#input-field:active
 {
     border: 1px solid yellow;
     border-radius: 4px;
 }
 
-#add-to-cart-button
+#add-button
 {
     font-family: 'Press Start 2P';
     width: 100%;
@@ -82,12 +82,12 @@ body
     background-color: yellow;
 }
 
-#add-to-cart-button:active
+#add-button:active
 {
     background-color: rgb(197, 197, 35);
 }
 
-#add-to-cart-button:hover
+#add-button:hover
 {
     cursor: pointer;
 }
