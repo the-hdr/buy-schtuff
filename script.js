@@ -1,21 +1,21 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, push } from "https://www.gstatic.com/firebaseejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+
+const inputFieldElement = document.getElementById("input-field")
+const addButtonElement = document.getElementById("add-button")
 
 const appSettings = {
-    databaseURL: "https://buy-schtuff-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    databaseURL: "https://og-realtime-database-default-rtdb.asia-southeast1.firebasedatabase.app/"
 }
 
 const app = initializeApp (appSettings)
 const database = getDatabase (app)
-const moviesInDb = ref (database, "movies")
+const shoppingListInDb = ref (database, "shoppingList")
 
-const inputFieldElement = document.getElementById ("input-field")
-const addButtonElement = document.getElementById ("add-button")
+addButtonElement.addEventListener("click", function() {
+    const inputValue = inputFieldElement.value
 
-addButtonElement.addEventListener ("click", function() {
-    let inputValue = inputFieldElement.value
+    push (shoppingListInDb, inputValue)
 
-    push (moviesInDb, inputValue)
-
-    console.log (`${inputValue} added to database`)
+    console.log(`\"${inputValue}\" added to the shopping list.`)
 })
