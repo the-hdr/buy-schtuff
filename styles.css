@@ -1,0 +1,93 @@
+body
+{
+    font-family: 'Press Start 2P';
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#heading
+{
+    color: yellow;
+}
+
+#add-to-cart-container
+{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 50%; 
+    height: 50%;
+
+    background-color:  rgb(24, 23, 23);
+
+    border: 5px solid yellow;
+    border-radius: 10px;
+}
+
+#logo
+{
+    width: auto;
+    height: 50%;
+}
+
+#text-content-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#text-input
+{
+    font-family: 'Press Start 2P';
+    width: 100%;
+    padding: 5% 10%;
+    margin: 5% 0;
+    box-sizing: border-box;
+    border: 1px solid yellow;
+    border-radius: 4px;
+    resize: none;
+
+    background-color: black;
+    color: grey
+}
+
+#text-input:active
+{
+    border: 1px solid yellow;
+    border-radius: 4px;
+}
+
+#add-to-cart-button
+{
+    font-family: 'Press Start 2P';
+    width: 100%;
+    padding: 5% 10%;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid yellow;
+    border-radius: 4px;
+    resize: none;
+
+    background-color: yellow;
+}
+
+#add-to-cart-button:active
+{
+    background-color: rgb(197, 197, 35);
+}
+
+#add-to-cart-button:hover
+{
+    cursor: pointer;
+}
